@@ -1,0 +1,832 @@
+package pages;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.DefaultComboBoxModel;
+
+public class preOrderSelection {
+
+    JFrame selectionFrame;
+    private JComboBox<String> cBoxSize001;
+    private JComboBox<String> cBoxQuantity001;
+    private JComboBox<String> cBoxSize002;
+    private JComboBox<String> cBoxQuantity002;
+    private JCheckBox cboxUnif001;
+    private JCheckBox cboxUnif002;
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    preOrderSelection window = new preOrderSelection();
+                    window.selectionFrame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    /**
+     * Create the application.
+     */
+    public preOrderSelection() {
+        initialize();
+    }
+
+    /**
+     * Initialize the contents of the frame.
+     */
+    private void initialize() {
+        selectionFrame = new JFrame();
+        selectionFrame.getContentPane().setBackground(new Color(53, 64, 143));
+        selectionFrame.setBounds(100, 100, 1260, 845);
+        selectionFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        selectionFrame.getContentPane().setLayout(null);
+
+        JPanel selectionPanel = new JPanel();
+        selectionPanel.setBackground(Color.WHITE);
+        selectionPanel.setBounds(12, 140, 1221, 615);
+        selectionFrame.getContentPane().add(selectionPanel);
+        selectionPanel.setLayout(null);
+
+        JLabel lblTitleTrad = new JLabel("TRADITIONAL UNIFORM");
+        lblTitleTrad.setFont(new Font("Tahoma", Font.BOLD, 15));
+        lblTitleTrad.setBounds(22, 10, 357, 28);
+        selectionPanel.add(lblTitleTrad);
+        
+        // trad blouse
+        cboxUnif001 = new JCheckBox("");
+        cboxUnif001.setBackground(new Color(255, 255, 255));
+        cboxUnif001.setBounds(29, 44, 20, 20);
+        selectionPanel.add(cboxUnif001);
+        
+        JLabel lblUnif001 = new JLabel("Traditional Uniform Blouse");
+        lblUnif001.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif001.setBounds(59, 46, 170, 15);
+        selectionPanel.add(lblUnif001);
+        
+        JLabel lblProduct001 = new JLabel("NUBEUNIF0001");
+        lblProduct001.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct001.setBounds(59, 62, 70, 15);
+        selectionPanel.add(lblProduct001);
+        
+        JLabel lblPrice001 = new JLabel("₱560");
+        lblPrice001.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice001.setBounds(239, 46, 40, 15);
+        selectionPanel.add(lblPrice001);
+
+        cBoxSize001 = new JComboBox<>();
+        cBoxSize001.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize001.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize001.setBounds(289, 46, 40, 20);
+        selectionPanel.add(cBoxSize001);
+
+        cBoxQuantity001 = new JComboBox<>();
+        cBoxQuantity001.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity001.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity001.setBounds(339, 46, 40, 20);
+        selectionPanel.add(cBoxQuantity001);
+        
+        
+        // trad polo
+        cboxUnif002 = new JCheckBox("");
+        cboxUnif002.setBackground(new Color(255, 255, 255));
+        cboxUnif002.setBounds(29, 84, 20, 20);
+        selectionPanel.add(cboxUnif002);
+        
+        JLabel lblUnif002 = new JLabel("Traditional Uniform Polo");
+        lblUnif002.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif002.setBounds(59, 86, 170, 15);
+        selectionPanel.add(lblUnif002);
+        
+        JLabel lblProduct002 = new JLabel("NUBEUNIF0002");
+        lblProduct002.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct002.setBounds(59, 102, 70, 15);
+        selectionPanel.add(lblProduct002);
+        
+        JLabel lblPrice002 = new JLabel("₱560");
+        lblPrice002.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice002.setBounds(239, 86, 40, 15);
+        selectionPanel.add(lblPrice002);
+
+        cBoxSize002 = new JComboBox<>();
+        cBoxSize002.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize002.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize002.setBounds(289, 84, 40, 20);
+        selectionPanel.add(cBoxSize002);
+
+        cBoxQuantity002 = new JComboBox<>();
+        cBoxQuantity002.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity002.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity002.setBounds(339, 84, 40, 20);
+        selectionPanel.add(cBoxQuantity002);
+        
+        JCheckBox cboxUnif003 = new JCheckBox("");
+        cboxUnif003.setBackground(Color.WHITE);
+        cboxUnif003.setBounds(29, 127, 20, 20);
+        selectionPanel.add(cboxUnif003);
+        
+        JLabel lblUnif003 = new JLabel("Traditional Pants - Female ");
+        lblUnif003.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif003.setBounds(59, 129, 170, 15);
+        selectionPanel.add(lblUnif003);
+        
+        JLabel lblProduct003 = new JLabel("NUBEUNIF0003");
+        lblProduct003.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct003.setBounds(59, 145, 70, 15);
+        selectionPanel.add(lblProduct003);
+        
+        JLabel lblPrice003 = new JLabel("₱470");
+        lblPrice003.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice003.setBounds(239, 129, 40, 15);
+        selectionPanel.add(lblPrice003);
+        
+        JComboBox<String> cBoxSize003 = new JComboBox<String>();
+        cBoxSize003.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize003.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize003.setBounds(289, 127, 40, 20);
+        selectionPanel.add(cBoxSize003);
+        
+        JComboBox<String> cBoxQuantity003 = new JComboBox<String>();
+        cBoxQuantity003.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity003.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity003.setBounds(339, 127, 40, 20);
+        selectionPanel.add(cBoxQuantity003);
+        
+        JCheckBox cboxUnif004 = new JCheckBox("");
+        cboxUnif004.setBackground(Color.WHITE);
+        cboxUnif004.setBounds(29, 170, 20, 20);
+        selectionPanel.add(cboxUnif004);
+        
+        JLabel lblUnif004 = new JLabel("Traditional Pants - Male ");
+        lblUnif004.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif004.setBounds(59, 172, 170, 15);
+        selectionPanel.add(lblUnif004);
+        
+        JLabel lblProduct004 = new JLabel("NUBEUNIF0004");
+        lblProduct004.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct004.setBounds(59, 188, 70, 15);
+        selectionPanel.add(lblProduct004);
+        
+        JLabel lblPrice004 = new JLabel("₱470");
+        lblPrice004.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice004.setBounds(239, 172, 40, 15);
+        selectionPanel.add(lblPrice004);
+        
+        JComboBox<String> cBoxSize004 = new JComboBox<String>();
+        cBoxSize004.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize004.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize004.setBounds(289, 170, 40, 20);
+        selectionPanel.add(cBoxSize004);
+        
+        JComboBox<String> cBoxQuantity004 = new JComboBox<String>();
+        cBoxQuantity004.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity004.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity004.setBounds(339, 170, 40, 20);
+        selectionPanel.add(cBoxQuantity004);
+        
+        JCheckBox cboxUnif005 = new JCheckBox("");
+        cboxUnif005.setBackground(Color.WHITE);
+        cboxUnif005.setBounds(29, 213, 20, 20);
+        selectionPanel.add(cboxUnif005);
+        
+        JLabel lblUnif005 = new JLabel("Traditional Skirt");
+        lblUnif005.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif005.setBounds(59, 215, 170, 15);
+        selectionPanel.add(lblUnif005);
+        
+        JLabel lblProduct005 = new JLabel("NUBEUNIF0005");
+        lblProduct005.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct005.setBounds(59, 231, 70, 15);
+        selectionPanel.add(lblProduct005);
+        
+        JLabel lblPrice005 = new JLabel("₱310");
+        lblPrice005.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice005.setBounds(239, 215, 40, 15);
+        selectionPanel.add(lblPrice005);
+        
+        JComboBox<String> cBoxSize005 = new JComboBox<String>();
+        cBoxSize005.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize005.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize005.setBounds(289, 213, 40, 20);
+        selectionPanel.add(cBoxSize005);
+        
+        JComboBox<String> cBoxQuantity005 = new JComboBox<String>();
+        cBoxQuantity005.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity005.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity005.setBounds(339, 213, 40, 20);
+        selectionPanel.add(cBoxQuantity005);
+        
+        JLabel lblTitleCAH = new JLabel("COLLEGE OF ALLIED HEALTH UNIFORM");
+        lblTitleCAH.setFont(new Font("Tahoma", Font.BOLD, 15));
+        lblTitleCAH.setBounds(22, 256, 357, 28);
+        selectionPanel.add(lblTitleCAH);
+        
+        JCheckBox cboxUnif006 = new JCheckBox("");
+        cboxUnif006.setBackground(Color.WHITE);
+        cboxUnif006.setBounds(29, 290, 20, 20);
+        selectionPanel.add(cboxUnif006);
+        
+        JLabel lblUnif006 = new JLabel("CAH White Skirt");
+        lblUnif006.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif006.setBounds(59, 292, 170, 15);
+        selectionPanel.add(lblUnif006);
+        
+        JLabel lblProduct006 = new JLabel("NUBEUNIF0006");
+        lblProduct006.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct006.setBounds(59, 308, 70, 15);
+        selectionPanel.add(lblProduct006);
+        
+        JLabel lblPrice006 = new JLabel("₱450");
+        lblPrice006.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice006.setBounds(239, 292, 40, 15);
+        selectionPanel.add(lblPrice006);
+        
+        JComboBox<String> cBoxSize006 = new JComboBox<String>();
+        cBoxSize006.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize006.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize006.setBounds(289, 292, 40, 20);
+        selectionPanel.add(cBoxSize006);
+        
+        JComboBox<String> cBoxQuantity006 = new JComboBox<String>();
+        cBoxQuantity006.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity006.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity006.setBounds(339, 292, 40, 20);
+        selectionPanel.add(cBoxQuantity006);
+        
+        JCheckBox cboxUnif007 = new JCheckBox("");
+        cboxUnif007.setBackground(Color.WHITE);
+        cboxUnif007.setBounds(29, 330, 20, 20);
+        selectionPanel.add(cboxUnif007);
+        
+        JLabel lblUnif007 = new JLabel("CAH White Pants");
+        lblUnif007.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif007.setBounds(59, 332, 170, 15);
+        selectionPanel.add(lblUnif007);
+        
+        JLabel lblProduct007 = new JLabel("NUBEUNIF0007");
+        lblProduct007.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct007.setBounds(59, 348, 70, 15);
+        selectionPanel.add(lblProduct007);
+        
+        JLabel lblPrice007 = new JLabel("₱550");
+        lblPrice007.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice007.setBounds(239, 332, 40, 15);
+        selectionPanel.add(lblPrice007);
+        
+        JComboBox<String> cBoxSize007 = new JComboBox<String>();
+        cBoxSize007.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize007.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize007.setBounds(289, 330, 40, 20);
+        selectionPanel.add(cBoxSize007);
+        
+        JComboBox<String> cBoxQuantity007 = new JComboBox<String>();
+        cBoxQuantity007.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity007.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity007.setBounds(339, 330, 40, 20);
+        selectionPanel.add(cBoxQuantity007);
+        
+        JLabel lblTitlePsych = new JLabel("PSYCHOLOGY UNIFORM");
+        lblTitlePsych.setFont(new Font("Tahoma", Font.BOLD, 15));
+        lblTitlePsych.setBounds(22, 375, 357, 28);
+        selectionPanel.add(lblTitlePsych);
+        
+        JCheckBox cboxUnif008 = new JCheckBox("");
+        cboxUnif008.setBackground(Color.WHITE);
+        cboxUnif008.setBounds(29, 409, 20, 20);
+        selectionPanel.add(cboxUnif008);
+        
+        JLabel lblUnif008 = new JLabel("Psychology Blouse with Mustard Pocket Piping ");
+        lblUnif008.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif008.setBounds(59, 411, 170, 15);
+        selectionPanel.add(lblUnif008);
+        
+        JLabel lblProduct008 = new JLabel("NUBEUNIF0008");
+        lblProduct008.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct008.setBounds(59, 427, 70, 15);
+        selectionPanel.add(lblProduct008);
+        
+        JLabel lblPrice008 = new JLabel("₱600");
+        lblPrice008.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice008.setBounds(239, 411, 40, 15);
+        selectionPanel.add(lblPrice008);
+        
+        JComboBox<String> cBoxSize008 = new JComboBox<String>();
+        cBoxSize008.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize008.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize008.setBounds(289, 411, 40, 20);
+        selectionPanel.add(cBoxSize008);
+        
+        JComboBox<String> cBoxQuantity008 = new JComboBox<String>();
+        cBoxQuantity008.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity008.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity008.setBounds(339, 411, 40, 20);
+        selectionPanel.add(cBoxQuantity008);
+        
+        JCheckBox cboxUnif009 = new JCheckBox("");
+        cboxUnif009.setBackground(Color.WHITE);
+        cboxUnif009.setBounds(29, 449, 20, 20);
+        selectionPanel.add(cboxUnif009);
+        
+        JLabel lblUnif009 = new JLabel("Psychology Polo with Gold Pocket Piping");
+        lblUnif009.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif009.setBounds(59, 451, 170, 15);
+        selectionPanel.add(lblUnif009);
+        
+        JLabel lblProduct009 = new JLabel("NUBEUNIF0009");
+        lblProduct009.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct009.setBounds(59, 467, 70, 15);
+        selectionPanel.add(lblProduct009);
+        
+        JLabel lblPrice009 = new JLabel("₱600");
+        lblPrice009.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice009.setBounds(239, 451, 40, 15);
+        selectionPanel.add(lblPrice009);
+        
+        JComboBox<String> cBoxSize009 = new JComboBox<String>();
+        cBoxSize009.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize009.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize009.setBounds(289, 449, 40, 20);
+        selectionPanel.add(cBoxSize009);
+        
+        JComboBox<String> cBoxQuantity009 = new JComboBox<String>();
+        cBoxQuantity009.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity009.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity009.setBounds(339, 449, 40, 20);
+        selectionPanel.add(cBoxQuantity009);
+        
+        JLabel lblTitleMedTech = new JLabel("MEDICAL TECHNOLOGY UNIFORM");
+        lblTitleMedTech.setFont(new Font("Tahoma", Font.BOLD, 15));
+        lblTitleMedTech.setBounds(22, 492, 357, 28);
+        selectionPanel.add(lblTitleMedTech);
+        
+        JCheckBox cboxUnif010 = new JCheckBox("");
+        cboxUnif010.setBackground(Color.WHITE);
+        cboxUnif010.setBounds(29, 526, 20, 20);
+        selectionPanel.add(cboxUnif010);
+        
+        JLabel lblUnif010 = new JLabel("MedTech Blouse with Green Pocket Piping");
+        lblUnif010.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif010.setBounds(59, 528, 170, 15);
+        selectionPanel.add(lblUnif010);
+        
+        JLabel lblProduct010 = new JLabel("NUBEUNIF0010");
+        lblProduct010.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct010.setBounds(59, 544, 70, 15);
+        selectionPanel.add(lblProduct010);
+        
+        JLabel lblPrice010 = new JLabel("₱600");
+        lblPrice010.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice010.setBounds(239, 528, 40, 15);
+        selectionPanel.add(lblPrice010);
+        
+        JComboBox<String> cBoxSize010 = new JComboBox<String>();
+        cBoxSize010.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize010.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize010.setBounds(289, 528, 40, 20);
+        selectionPanel.add(cBoxSize010);
+        
+        JComboBox<String> cBoxQuantity010 = new JComboBox<String>();
+        cBoxQuantity010.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity010.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity010.setBounds(339, 528, 40, 20);
+        selectionPanel.add(cBoxQuantity010);
+        
+        JCheckBox cboxUnif011 = new JCheckBox("");
+        cboxUnif011.setBackground(Color.WHITE);
+        cboxUnif011.setBounds(29, 566, 20, 20);
+        selectionPanel.add(cboxUnif011);
+        
+        JLabel lblUnif011 = new JLabel("MedTech Polo with Green Pocket Piping");
+        lblUnif011.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif011.setBounds(59, 568, 170, 15);
+        selectionPanel.add(lblUnif011);
+        
+        JLabel lblProduct011 = new JLabel("NUBEUNIF0011");
+        lblProduct011.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct011.setBounds(59, 584, 85, 15);
+        selectionPanel.add(lblProduct011);
+        
+        JLabel lblPrice011 = new JLabel("₱600");
+        lblPrice011.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice011.setBounds(239, 568, 40, 15);
+        selectionPanel.add(lblPrice011);
+        
+        JComboBox<String> cBoxSize011 = new JComboBox<String>();
+        cBoxSize011.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize011.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize011.setBounds(289, 566, 40, 20);
+        selectionPanel.add(cBoxSize011);
+        
+        JComboBox<String> cBoxQuantity011 = new JComboBox<String>();
+        cBoxQuantity011.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity011.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity011.setBounds(339, 566, 40, 20);
+        selectionPanel.add(cBoxQuantity011);
+        
+        JLabel lblTitleNursing = new JLabel("NURSING UNIFORM");
+        lblTitleNursing.setFont(new Font("Tahoma", Font.BOLD, 15));
+        lblTitleNursing.setBounds(454, 10, 357, 28);
+        selectionPanel.add(lblTitleNursing);
+        
+        JCheckBox cboxUnif012 = new JCheckBox("");
+        cboxUnif012.setBackground(Color.WHITE);
+        cboxUnif012.setBounds(461, 44, 20, 20);
+        selectionPanel.add(cboxUnif012);
+        
+        JLabel lblUnif012 = new JLabel("Nursing Blouse with Gold Pocket Piping");
+        lblUnif012.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif012.setBounds(491, 46, 170, 15);
+        selectionPanel.add(lblUnif012);
+        
+        JLabel lblProduct012 = new JLabel("NUBEUNIF0012");
+        lblProduct012.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct012.setBounds(491, 62, 70, 15);
+        selectionPanel.add(lblProduct012);
+        
+        JLabel lblPrice012 = new JLabel("₱600");
+        lblPrice012.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice012.setBounds(671, 46, 40, 15);
+        selectionPanel.add(lblPrice012);
+        
+        JComboBox<String> cBoxSize012 = new JComboBox<String>();
+        cBoxSize012.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize012.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize012.setBounds(721, 46, 40, 20);
+        selectionPanel.add(cBoxSize012);
+        
+        JComboBox<String> cBoxQuantity012 = new JComboBox<String>();
+        cBoxQuantity012.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity012.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity012.setBounds(771, 46, 40, 20);
+        selectionPanel.add(cBoxQuantity012);
+        
+        JCheckBox cboxUnif013 = new JCheckBox("");
+        cboxUnif013.setBackground(Color.WHITE);
+        cboxUnif013.setBounds(461, 84, 20, 20);
+        selectionPanel.add(cboxUnif013);
+        
+        JLabel lblUnif013 = new JLabel("Nursing Polo with Gold Pocket Piping");
+        lblUnif013.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif013.setBounds(491, 86, 170, 15);
+        selectionPanel.add(lblUnif013);
+        
+        JLabel lblProduct013 = new JLabel("NUBEUNIF0013");
+        lblProduct013.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct013.setBounds(491, 102, 85, 15);
+        selectionPanel.add(lblProduct013);
+        
+        JLabel lblPrice013 = new JLabel("₱600");
+        lblPrice013.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice013.setBounds(671, 86, 40, 15);
+        selectionPanel.add(lblPrice013);
+        
+        JComboBox<String> cBoxSize013 = new JComboBox<String>();
+        cBoxSize013.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize013.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize013.setBounds(721, 84, 40, 20);
+        selectionPanel.add(cBoxSize013);
+        
+        JComboBox<String> cBoxQuantity013 = new JComboBox<String>();
+        cBoxQuantity013.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity013.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity013.setBounds(771, 84, 40, 20);
+        selectionPanel.add(cBoxQuantity013);
+        
+        JLabel lblTitlePharmacy = new JLabel("PHARMACY UNIFORM");
+        lblTitlePharmacy.setFont(new Font("Tahoma", Font.BOLD, 15));
+        lblTitlePharmacy.setBounds(454, 127, 357, 28);
+        selectionPanel.add(lblTitlePharmacy);
+        
+        JCheckBox cboxUnif014 = new JCheckBox("");
+        cboxUnif014.setBackground(Color.WHITE);
+        cboxUnif014.setBounds(461, 161, 20, 20);
+        selectionPanel.add(cboxUnif014);
+        
+        JLabel lblUnif014 = new JLabel("Pharmacy Blouse with Blue Pocket Piping");
+        lblUnif014.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif014.setBounds(491, 163, 170, 15);
+        selectionPanel.add(lblUnif014);
+        
+        JLabel lblProduct014 = new JLabel("NUBEUNIF0014");
+        lblProduct014.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct014.setBounds(491, 179, 70, 15);
+        selectionPanel.add(lblProduct014);
+        
+        JLabel lblPrice014 = new JLabel("₱600");
+        lblPrice014.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice014.setBounds(671, 163, 40, 15);
+        selectionPanel.add(lblPrice014);
+        
+        JComboBox<String> cBoxSize014 = new JComboBox<String>();
+        cBoxSize014.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize014.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize014.setBounds(721, 163, 40, 20);
+        selectionPanel.add(cBoxSize014);
+        
+        JComboBox<String> cBoxQuantity014 = new JComboBox<String>();
+        cBoxQuantity014.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity014.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity014.setBounds(771, 163, 40, 20);
+        selectionPanel.add(cBoxQuantity014);
+        
+        JCheckBox cboxUnif015 = new JCheckBox("");
+        cboxUnif015.setBackground(Color.WHITE);
+        cboxUnif015.setBounds(461, 201, 20, 20);
+        selectionPanel.add(cboxUnif015);
+        
+        JLabel lblUnif015 = new JLabel("Pharmacy Blouse with Blue Pocket Piping");
+        lblUnif015.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif015.setBounds(491, 203, 170, 15);
+        selectionPanel.add(lblUnif015);
+        
+        JLabel lblProduct015 = new JLabel("NUBEUNIF0015");
+        lblProduct015.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct015.setBounds(491, 219, 85, 15);
+        selectionPanel.add(lblProduct015);
+        
+        JLabel lblPrice015 = new JLabel("₱600");
+        lblPrice015.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice015.setBounds(671, 203, 40, 15);
+        selectionPanel.add(lblPrice015);
+        
+        JComboBox<String> cBoxSize015 = new JComboBox<String>();
+        cBoxSize015.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize015.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize015.setBounds(721, 201, 40, 20);
+        selectionPanel.add(cBoxSize015);
+        
+        JComboBox<String> cBoxQuantity015 = new JComboBox<String>();
+        cBoxQuantity015.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity015.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity015.setBounds(771, 201, 40, 20);
+        selectionPanel.add(cBoxQuantity015);
+        
+        JLabel lblTitleTourism = new JLabel("TOURISM UNIFORM");
+        lblTitleTourism.setFont(new Font("Tahoma", Font.BOLD, 15));
+        lblTitleTourism.setBounds(454, 244, 357, 28);
+        selectionPanel.add(lblTitleTourism);
+        
+        JCheckBox cboxUnif016 = new JCheckBox("");
+        cboxUnif016.setBackground(Color.WHITE);
+        cboxUnif016.setBounds(461, 278, 20, 20);
+        selectionPanel.add(cboxUnif016);
+        
+        JLabel lblUnif016 = new JLabel("Tourism Scarf ");
+        lblUnif016.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif016.setBounds(491, 280, 170, 15);
+        selectionPanel.add(lblUnif016);
+        
+        JLabel lblProduct016 = new JLabel("NUBEUNIF0016");
+        lblProduct016.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct016.setBounds(491, 296, 70, 15);
+        selectionPanel.add(lblProduct016);
+        
+        JLabel lblPrice016 = new JLabel("₱250");
+        lblPrice016.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice016.setBounds(671, 280, 40, 15);
+        selectionPanel.add(lblPrice016);
+        
+        JComboBox<String> cBoxSize016 = new JComboBox<String>();
+        cBoxSize016.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize016.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize016.setBounds(721, 280, 40, 20);
+        selectionPanel.add(cBoxSize016);
+        
+        JComboBox<String> cBoxQuantity016 = new JComboBox<String>();
+        cBoxQuantity016.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity016.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity016.setBounds(771, 280, 40, 20);
+        selectionPanel.add(cBoxQuantity016);
+        
+        JCheckBox cboxUnif017 = new JCheckBox("");
+        cboxUnif017.setBackground(Color.WHITE);
+        cboxUnif017.setBounds(461, 318, 20, 20);
+        selectionPanel.add(cboxUnif017);
+        
+        JLabel lblUnif017 = new JLabel("Tourism Vest (Unisex)");
+        lblUnif017.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif017.setBounds(491, 320, 170, 15);
+        selectionPanel.add(lblUnif017);
+        
+        JLabel lblProduct017 = new JLabel("NUBEUNIF0017");
+        lblProduct017.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct017.setBounds(491, 336, 70, 15);
+        selectionPanel.add(lblProduct017);
+        
+        JLabel lblPrice017 = new JLabel("₱560");
+        lblPrice017.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice017.setBounds(671, 320, 40, 15);
+        selectionPanel.add(lblPrice017);
+        
+        JComboBox<String> cBoxSize017 = new JComboBox<String>();
+        cBoxSize017.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize017.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize017.setBounds(721, 318, 40, 20);
+        selectionPanel.add(cBoxSize017);
+        
+        JComboBox<String> cBoxQuantity017 = new JComboBox<String>();
+        cBoxQuantity017.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity017.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity017.setBounds(771, 318, 40, 20);
+        selectionPanel.add(cBoxQuantity017);
+        
+        JCheckBox cboxUnif018 = new JCheckBox("");
+        cboxUnif018.setBackground(Color.WHITE);
+        cboxUnif018.setBounds(461, 361, 20, 20);
+        selectionPanel.add(cboxUnif018);
+        
+        JLabel lblUnif018 = new JLabel("Tourism Blazer");
+        lblUnif018.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif018.setBounds(491, 363, 170, 15);
+        selectionPanel.add(lblUnif018);
+        
+        JLabel lblProduct018 = new JLabel("NUBEUNIF0018");
+        lblProduct018.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct018.setBounds(491, 379, 70, 15);
+        selectionPanel.add(lblProduct018);
+        
+        JLabel lblPrice018 = new JLabel("₱1260");
+        lblPrice018.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice018.setBounds(671, 363, 40, 15);
+        selectionPanel.add(lblPrice018);
+        
+        JComboBox<String> cBoxSize018 = new JComboBox<String>();
+        cBoxSize018.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize018.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize018.setBounds(721, 361, 40, 20);
+        selectionPanel.add(cBoxSize018);
+        
+        JComboBox<String> cBoxQuantity018 = new JComboBox<String>();
+        cBoxQuantity018.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity018.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity018.setBounds(771, 361, 40, 20);
+        selectionPanel.add(cBoxQuantity018);
+        
+        JCheckBox cboxUnif019 = new JCheckBox("");
+        cboxUnif019.setBackground(Color.WHITE);
+        cboxUnif019.setBounds(461, 404, 20, 20);
+        selectionPanel.add(cboxUnif019);
+        
+        JLabel lblUnif019 = new JLabel("Tourism Skirt");
+        lblUnif019.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif019.setBounds(491, 406, 170, 15);
+        selectionPanel.add(lblUnif019);
+        
+        JLabel lblProduct019 = new JLabel("NUBEUNIF0019");
+        lblProduct019.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct019.setBounds(491, 422, 70, 15);
+        selectionPanel.add(lblProduct019);
+        
+        JLabel lblPrice019 = new JLabel("₱560");
+        lblPrice019.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice019.setBounds(671, 406, 40, 15);
+        selectionPanel.add(lblPrice019);
+        
+        JComboBox<String> cBoxSize019 = new JComboBox<String>();
+        cBoxSize019.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize019.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize019.setBounds(721, 404, 40, 20);
+        selectionPanel.add(cBoxSize019);
+        
+        JComboBox<String> cBoxQuantity019 = new JComboBox<String>();
+        cBoxQuantity019.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity019.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity019.setBounds(771, 404, 40, 20);
+        selectionPanel.add(cBoxQuantity019);
+        
+        JCheckBox cboxUnif020 = new JCheckBox("");
+        cboxUnif020.setBackground(Color.WHITE);
+        cboxUnif020.setBounds(461, 447, 20, 20);
+        selectionPanel.add(cboxUnif020);
+        
+        JLabel lblUnif020 = new JLabel("Tourism Coat");
+        lblUnif020.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif020.setBounds(491, 449, 170, 15);
+        selectionPanel.add(lblUnif020);
+        
+        JLabel lblProduct020 = new JLabel("NUBEUNIF0020");
+        lblProduct020.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct020.setBounds(491, 465, 70, 15);
+        selectionPanel.add(lblProduct020);
+        
+        JLabel lblPrice020 = new JLabel("₱1260");
+        lblPrice020.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice020.setBounds(671, 449, 40, 15);
+        selectionPanel.add(lblPrice020);
+        
+        JComboBox<String> cBoxSize020 = new JComboBox<String>();
+        cBoxSize020.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize020.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize020.setBounds(721, 447, 40, 20);
+        selectionPanel.add(cBoxSize020);
+        
+        JComboBox<String> cBoxQuantity020 = new JComboBox<String>();
+        cBoxQuantity020.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity020.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity020.setBounds(771, 447, 40, 20);
+        selectionPanel.add(cBoxQuantity020);
+        
+        JCheckBox cboxUnif021 = new JCheckBox("");
+        cboxUnif021.setBackground(Color.WHITE);
+        cboxUnif021.setBounds(461, 492, 20, 20);
+        selectionPanel.add(cboxUnif021);
+        
+        JLabel lblUnif021 = new JLabel("Tourism Pants");
+        lblUnif021.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblUnif021.setBounds(491, 494, 170, 15);
+        selectionPanel.add(lblUnif021);
+        
+        JLabel lblProduct021 = new JLabel("NUBEUNIF0021");
+        lblProduct021.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lblProduct021.setBounds(491, 510, 70, 15);
+        selectionPanel.add(lblProduct021);
+        
+        JLabel lblPrice021 = new JLabel("₱670");
+        lblPrice021.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblPrice021.setBounds(671, 494, 40, 15);
+        selectionPanel.add(lblPrice021);
+        
+        JComboBox<String> cBoxSize021 = new JComboBox<String>();
+        cBoxSize021.setModel(new DefaultComboBoxModel(new String[] {"XS", "S", "M", "L", "XL"}));
+        cBoxSize021.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxSize021.setBounds(721, 492, 40, 20);
+        selectionPanel.add(cBoxSize021);
+        
+        JComboBox<String> cBoxQuantity021 = new JComboBox<String>();
+        cBoxQuantity021.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5"}));
+        cBoxQuantity021.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        cBoxQuantity021.setBounds(771, 492, 40, 20);
+        selectionPanel.add(cBoxQuantity021);
+        
+
+        
+   
+        
+        
+        
+        
+        
+        // go to cart button
+        JButton btnCart = new JButton("Go to Cart");
+        btnCart.setBounds(573, 773, 100, 25);
+        selectionFrame.getContentPane().add(btnCart);
+        btnCart.addActionListener(e -> {
+            String selectedItems = getSelectedItems();
+            preOrderCart cart = new preOrderCart(selectedItems);
+            cart.cartFrame.setVisible(true);
+        });
+
+        JLabel lblSelectionBanner = new JLabel("");
+        lblSelectionBanner.setHorizontalAlignment(SwingConstants.CENTER);
+        lblSelectionBanner.setIcon(new ImageIcon(preOrderSelection.class.getResource("Main Banner.png")));
+        lblSelectionBanner.setBounds(0, 0, 1170, 120);
+        selectionFrame.getContentPane().add(lblSelectionBanner);
+    }
+    
+    private String getSelectedItems() {
+        StringBuilder selectedItems = new StringBuilder();
+        if (cboxUnif001.isSelected()) {
+            int quantity001 = Integer.parseInt((String) cBoxQuantity001.getSelectedItem());
+            int totalAmount001 = quantity001 * 560; 
+            selectedItems.append("<html>PRODUCT NAME: Traditional Uniform Blouse<br/>")
+                         .append("PRODUCT ID: NUBEUNIF0001<br/>")
+                         .append("PRICE: ₱560<br/>")
+                         .append("SIZE: ").append(cBoxSize001.getSelectedItem()).append("<br/>")
+                         .append("QUANTITY: ").append(quantity001).append("<br/>")
+                         .append("TOTAL AMOUNT: ₱").append(totalAmount001).append("</html>");
+        }
+        else if (cboxUnif002.isSelected()) {
+            int quantity002 = Integer.parseInt((String) cBoxQuantity002.getSelectedItem());
+            int totalAmount002 = quantity002 * 560; 
+            if (selectedItems.length() > 0) {
+                // If data for the first checkbox is already added, add a separator
+                selectedItems.append("<br/><br/>");
+            }
+            selectedItems.append("<html>PRODUCT NAME: Traditional Uniform Polo<br/>")
+                         .append("PRODUCT ID: NUBEUNIF0002<br/>")
+                         .append("PRICE: ₱560<br/>")
+                         .append("SIZE: ").append(cBoxSize002.getSelectedItem()).append("<br/>")
+                         .append("QUANTITY: ").append(quantity002).append("<br/>")
+                         .append("TOTAL AMOUNT: ₱").append(totalAmount002).append("</html>");
+        }
+        else {
+        
+        }
+        return selectedItems.toString();
+    }
+}
